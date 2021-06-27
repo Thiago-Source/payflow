@@ -42,6 +42,25 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             Positioned(
+              top: size.height * 0.33,
+              left: 0,
+              right: 0,
+              child: Container(
+                width: 200,
+                height: 150,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.bottomCenter,
+                    end: Alignment.topCenter,
+                    colors: [
+                      AppColors.background,
+                      AppColors.background.withOpacity(0.0)
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
               left: 0,
               right: 0,
               bottom: size.height * 0.13,
