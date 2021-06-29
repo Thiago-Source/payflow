@@ -1,5 +1,6 @@
 import 'package:animated_card/animated_card.dart';
 import 'package:flutter/material.dart';
+import 'package:payflow_nlw/shared/widgets/screen_icon/screen_icon.dart';
 import 'package:payflow_nlw/shared/widgets/social_login/social_login_button.dart';
 import '../../shared/themes/app_images.dart';
 import '../../shared/themes/app_text_styles.dart';
@@ -61,6 +62,26 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             Positioned(
+              top: size.height * 0.342,
+              left: size.width * 0.18,
+              child: AnimatedCard(
+                direction: AnimatedCardDirection.right,
+                child: ScreenIcon(
+                  icon: Icons.add_box_outlined,
+                ),
+              ),
+            ),
+            Positioned(
+              top: size.height * 0.22,
+              left: size.width * 0.7,
+              child: AnimatedCard(
+                direction: AnimatedCardDirection.left,
+                child: ScreenIcon(
+                  icon: Icons.description_outlined,
+                ),
+              ),
+            ),
+            Positioned(
               left: 0,
               right: 0,
               bottom: size.height * 0.13,
@@ -69,18 +90,22 @@ class _LoginPageState extends State<LoginPage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Image.asset(AppImages.logomini),
-                  Padding(
-                    padding: EdgeInsets.only(
-                        left: 70, right: 70, top: 30, bottom: 20),
-                    child: Text(
-                      'Organize seus boletos em um só lugar',
-                      style: TextStyles.titleHome,
-                      textAlign: TextAlign.center,
+                  AnimatedCard(
+                    initDelay: Duration(milliseconds: 005),
+                    direction: AnimatedCardDirection.bottom,
+                    child: Padding(
+                      padding: EdgeInsets.only(
+                          left: 70, right: 70, top: 30, bottom: 20),
+                      child: Text(
+                        'Organize seus boletos em um só lugar',
+                        style: TextStyles.titleHome,
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                   ),
                   AnimatedCard(
                     direction: AnimatedCardDirection.bottom,
-                    initDelay: Duration(milliseconds: 05),
+                    initDelay: Duration(milliseconds: 200),
                     child: Padding(
                       padding: EdgeInsets.only(left: 40, right: 40, top: 20),
                       child: SocialLoginButton(

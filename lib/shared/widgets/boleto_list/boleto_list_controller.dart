@@ -31,5 +31,4 @@ class BoletoListController {
     boletos!.removeAt(currentIndex);
     await instance.setStringList('boletos', boletos);
   }
-
 }
